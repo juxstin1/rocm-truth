@@ -1,3 +1,6 @@
+[![CI](https://github.com/juxstin1/rocm-truth/actions/workflows/ci.yml/badge.svg)](https://github.com/juxstin1/rocm-truth/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/juxstin1/rocm-truth)](LICENSE)
+
 # rocm-truth
 
 Machine-verifiable GPU execution receipts for ROCm environments.
@@ -27,6 +30,12 @@ rocm-truth-<hash>.json
 
 - `execution_verified`: true only when a GPU-computed value is read back on the CPU
 - `rocm_stack_verified`: true only when ROCm tools are detectable (Linux only)
+
+## What this repo is not
+
+- Not a benchmark or performance suite.
+- Not an installer or ROCm setup guide.
+- Not a toolkit or workflow system.
 
 ## Spec
 
