@@ -26,6 +26,25 @@ Receipts are written to the working directory as:
 rocm-truth-<hash>.json
 ```
 
+## Regulatory & Compliance
+
+Attach receipts to prove real GPU execution occurred.
+
+**Government & Policy**
+- Export controls — verify what hardware actually ran a workload
+- Carbon reporting — prove actual GPU usage, not estimates
+- Compute subsidies — prove funded hardware is being utilized
+- Data sovereignty — verify compute jurisdiction (pair with location attestation)
+
+**Commercial**
+- Cloud billing — receipt proves you got what you paid for
+- SLA verification — prove the GPU tier promised was delivered
+- Audit trails — every inference request gets a hardware receipt
+
+**AI/ML**
+- Model training claims — prove which GPU trained a model
+- Inference verification — attach receipts to LLM API responses
+
 ## Verification fields
 
 - `execution_verified`: true only when a GPU-computed value is read back on the CPU
