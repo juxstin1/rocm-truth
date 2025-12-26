@@ -36,3 +36,8 @@ rocm-truth-<hash>.json
 
 - `docs/example_receipt_pass.json`
 - `docs/example_receipt_fail.json`
+
+## Contributing
+
+Keep changes minimal and verification-only. If a change cannot be proven, it
+must be marked explicitly. Issues and small PRs are welcome.

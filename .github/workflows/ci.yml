@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Syntax check
+        run: python -m py_compile rocm-truth.py
+      - name: Docs check
+        run: |
+          python - <<'PY'
+          import pathlib
+          import sys
+
+          required = [
+              "README.md",
+              "SPEC.md",
+              "docs/example_receipt_pass.json",
+              "docs/example_receipt_fail.json",
+          ]
+
+          missing = [p for p in required if not pathlib.Path(p).exists()]
+          if missing:
+              print("Missing files:", missing)
+              sys.exit(1)
+
+          empty = [p for p in required if pathlib.Path(p).stat().st_size == 0]
+          if empty:
+              print("Empty files:", empty)
+              sys.exit(1)
+          PY
