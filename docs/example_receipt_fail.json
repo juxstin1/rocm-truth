@@ -1,0 +1,28 @@
+{
+  "version": "2.0",
+  "receipt_hash": "examplefail654321",
+  "hash_inputs": {
+    "gpu_name": "AMD Radeon RX 9070 XT",
+    "torch_version": "torch-2.6.0.dev",
+    "os": "Windows-11-10.0.26200-SP0"
+  },
+  "status": "FAIL",
+  "verification": {
+    "execution_verified": false,
+    "rocm_stack_verified": false,
+    "method": "data_dependency"
+  },
+  "test_result": {
+    "status": "FAIL",
+    "reason": "No HIP/CUDA device available"
+  },
+  "env": {
+    "timestamp": "2025-12-26T00:00:00Z",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python_version": "3.12.x",
+    "hip_env": {
+      "HIP_PATH": "",
+      "HIP_PLATFORM": ""
+    }
+  }
+}

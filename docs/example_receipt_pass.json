@@ -1,0 +1,47 @@
+{
+  "version": "2.0",
+  "receipt_hash": "examplepass123456",
+  "hash_inputs": {
+    "gpu_name": "AMD Radeon RX 9070 XT",
+    "torch_version": "torch-2.6.0.dev",
+    "os": "Windows-11-10.0.26200-SP0"
+  },
+  "status": "PASS",
+  "verification": {
+    "execution_verified": true,
+    "rocm_stack_verified": false,
+    "method": "data_dependency"
+  },
+  "test_result": {
+    "status": "PASS",
+    "device_name": "AMD Radeon RX 9070 XT",
+    "total_memory_gb": 16.0,
+    "execution_verified": true,
+    "rocm_stack_verified": false,
+    "test_config": {
+      "size": 4096,
+      "dtype": "torch.float16",
+      "sync_method": "data_dependency"
+    },
+    "performance": {
+      "avg_time_ms": 10.2,
+      "tflops": 13.5,
+      "note": "Includes sync overhead - not peak compute"
+    },
+    "checksum_sample": -12.345
+  },
+  "env": {
+    "timestamp": "2025-12-26T00:00:00Z",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python_version": "3.12.x",
+    "hip_env": {
+      "HIP_PATH": "C:\\Program Files\\AMD\\ROCm\\6.4\\",
+      "HIP_PLATFORM": "amd"
+    }
+  },
+  "notes": [
+    "Windows HIP: execution verified via data dependency",
+    "Full ROCm stack verification requires Linux",
+    "Performance includes sync overhead - not peak compute"
+  ]
+}
